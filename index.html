@@ -9,25 +9,25 @@
 body{background:#f5f5f7}
 .main{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;padding-bottom:100px}
 .header{background:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
-.logo-icon{width:38px;height:38px;background:#111;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;flex-shrink:0}
+.logo-icon{width:40px;height:40px;background:#111;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;flex-shrink:0}
 .logo{font-weight:900;font-size:19px;line-height:1.1}.logo span{color:#ff385c;display:block;font-size:13px;letter-spacing:1px}
 .bread{background:#fff;padding:10px 16px;font-size:12px;color:#666;border-bottom:1px solid #eee}
 .hero{padding:18px 16px}
-.hero h1{font-size:24px;font-weight:900;line-height:1.25}
+.hero h1{font-size:26px;font-weight:900;line-height:1.25;color:#111}
 .hero h1 span{color:#ff385c}
 .sub{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.badge{background:#000;color:#fff;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:700}
-.green{background:#22c55e;color:#fff;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:700}
-.tabs{padding:0 16px;display:flex;gap:20px;overflow-x:auto;white-space:nowrap;border-bottom:1px solid #eee;background:#fff;position:sticky;top:62px;z-index:40}
-.tab{padding:16px 0;font-size:16px;font-weight:800;border-bottom:3px solid transparent;color:#666;cursor:pointer}
+.badge{background:#000;color:#fff;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:800}
+.green{background:#22c55e;color:#fff;padding:6px 10px;border-radius:6px;font-size:13px;font-weight:800}
+.tabs{padding:0 16px;display:flex;gap:20px;overflow-x:auto;white-space:nowrap;border-bottom:1px solid #eee;background:#fff;position:sticky;top:64px;z-index:40}
+.tab{padding:16px 0;font-size:17px;font-weight:900;border-bottom:3px solid transparent;color:#666;cursor:pointer}
 .tab.active{border-bottom-color:#111;color:#111}
 .tab-content{display:none}.tab-content.active{display:block}
 .sec-title{padding:20px 16px 10px;font-size:20px;font-weight:900;background:#f5f5f7}
 .card{background:#fff;margin:0 12px 14px;border:1px solid #e5e7eb;border-radius:14px;padding:18px}
-.card h3{font-size:19px;font-weight:900}
+.card h3{font-size:19px;font-weight:900;line-height:1.3}
 .meta{font-size:14px;color:#666;margin-top:4px}
 .add{border:2px solid #ff385c;color:#ff385c;background:#fff;padding:10px 22px;border-radius:10px;font-weight:900;font-size:15px;cursor:pointer;margin-top:14px;float:right}
-.feat{margin-top:14px;clear:both}.feat li{font-size:15px;color:#222;margin:6px 0;display:flex;gap:8px;list-style:none;line-height:1.4;font-weight:500}
+.feat{margin-top:14px;clear:both}.feat li{font-size:15px;color:#222;margin:6px 0;display:flex;gap:8px;list-style:none;line-height:1.5;font-weight:500}
 .feat li:before{content:"✓";color:#22c55e;font-weight:900;font-size:16px}
 .sticky{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;background:#fff;border-top:1px solid #ddd;padding:12px;display:flex;gap:10px;z-index:100}
 .sticky a{flex:1;text-align:center;padding:16px;border-radius:12px;text-decoration:none;font-weight:900;font-size:16px}
@@ -35,7 +35,7 @@ body{background:#f5f5f7}
 .footer-link{background:#111;color:#aaa;padding:18px;text-align:center;font-size:13px}
 .footer-link a{color:#fff;text-decoration:underline}
 .permanent-form{background:#fff;margin:14px;border:2.5px solid #111;border-radius:18px;padding:20px}
-.permanent-form h2{font-size:20px;font-weight:900}
+.permanent-form h2{font-size:20px;font-weight:900;line-height:1.3}
 .permanent-form p{font-size:14px;color:#555;margin:6px 0 14px}
 .form-group{margin-bottom:12px}
 .form-group label{font-size:13px;color:#333;display:block;margin-bottom:5px;font-weight:700}
@@ -48,7 +48,7 @@ body{background:#f5f5f7}
 .seo-box p{font-size:14px;color:#444;line-height:1.7;margin-bottom:10px}
 .seo-box .keywords{font-size:12px;color:#666;line-height:1.7}
 @keyframes bounceHint{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-.scroll-hint{position:fixed;bottom:85px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;z-index:90;animation:bounceHint 1.5s infinite;display:none}
+.scroll-hint{position:fixed;bottom:88px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:7px 14px;border-radius:20px;font-size:12px;z-index:90;animation:bounceHint 1.5s infinite;display:none;font-weight:700}
 .scroll-hint.show{display:block}
 </style>
 </head>
@@ -57,13 +57,51 @@ body{background:#f5f5f7}
 <div class="header">
 <div class="logo-icon">🏭</div>
 <div class="logo">CHIMNEY SOLUTION<span>SOUTH DELHI</span></div>
-<div style="margin-left:auto;background:#22c55e;color:#fff;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800">● 30 MINT VISIT</div>
+<div style="margin-left:auto;background:#22c55e;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:800">● 30 MINT VISIT</div>
 </div>
 <div class="bread">Home > South Delhi > Expert Technician 30 Mint Visit</div>
 
 <div class="hero">
 <h1>Chimney Solution <span>South Delhi</span> Expert Technician 30 Mint Visit HomeDoor</h1>
 <div class="sub"><span class="badge">★ 4.6 335 reviews</span><span class="green">✓ 30 Mint Visit</span><span class="green">✓ HomeDoor Service</span></div>
+</div>
+
+<!-- OVERVIEW + PHOTO SECTION -->
+<div style="background:#fff;padding:0;margin:0 12px 14px;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden">
+<img src="chimney-service.jpg" alt="Chimney Deep Cleaning South Delhi" style="width:100%;height:240px;object-fit:cover;display:block">
+<div style="padding:16px">
+<div style="display:flex;gap:10px;align-items:center;margin-bottom:10px">
+<span style="background:#000;color:#fff;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:800">★ 4.6 (335)</span>
+<span style="background:#22c55e;color:#fff;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:800">✓ Verified Expert</span>
+<span style="background:#ff385c;color:#fff;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:800">● LIVE SERVICE</span>
+</div>
+<h3 style="font-size:18px;font-weight:900;line-height:1.2">Overview - Expert Chimney Service Karte Hue</h3>
+<p style="font-size:14px;color:#333;line-height:1.6;margin-top:8px">
+Hamara <strong>Expert Technician 30 Mint me aapke ghar ayega</strong> aur chimney ka full deep clean karega. Upar photo me dekh sakte ho - kitna kaala tel nikalta hai chimney se! Blower, filter, grease trap sab nikal ke chemical se saaf karte hai. Suction wapas new jaisa ho jayega.
+</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+<div style="background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:10px">
+<div style="font-size:13px;font-weight:800">✓ Deep Grease Cleaning</div>
+<div style="font-size:11px;color:#666;margin-top:2px">Full oil, kaala grease remove</div>
+</div>
+<div style="background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:10px">
+<div style="font-size:13px;font-weight:800">✓ 90-Day Warranty</div>
+<div style="font-size:11px;color:#666;margin-top:2px">Suction guarantee</div>
+</div>
+<div style="background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:10px">
+<div style="font-size:13px;font-weight:800">✓ All Brands Service</div>
+<div style="font-size:11px;color:#666;margin-top:2px">Faber Glen Hafele Kaff</div>
+</div>
+<div style="background:#f9fafb;border:1px solid #eee;border-radius:10px;padding:10px">
+<div style="font-size:13px;font-weight:800">✓ 30 Mint Visit</div>
+<div style="font-size:11px;color:#666;margin-top:2px">HomeDoor Service</div>
+</div>
+</div>
+<div style="margin-top:14px;background:#fff7ed;border:1px dashed #fb923c;border-radius:10px;padding:10px 12px">
+<div style="font-size:13px;font-weight:800;color:#c2410c">⚠️ Agar ye kaala tel saaf nahi kiya toh?</div>
+<div style="font-size:12px;color:#444;margin-top:4px;line-height:1.5">• Suction kam • Aag lagne ka khatra • Badbu • Motor kharab - Har 4-5 mahine me service zaruri!</div>
+</div>
+</div>
 </div>
 
 <div class="tabs">
@@ -92,22 +130,26 @@ body{background:#f5f5f7}
 
 <div class="permanent-form" id="bookingForm">
 <h2>🔧 Book Expert Technician - 30 Mint Visit HomeDoor</h2>
-<p>Chimney Solution South Delhi • 90-Day Warranty • 4.6★ (335 reviews)</p>
+<p>Chimney Solution South Delhi • 90-Day Warranty • 4.6★ (335 reviews) • Form bharo expert 30 mint me call karega!</p>
 <div class="form-group"><label>Your Name</label><input type="text" id="pName" placeholder="Enter your name"></div>
 <div class="form-group"><label>Mobile Number</label><input type="tel" id="pPhone" placeholder="Enter mobile number"></div>
-<div class="form-group"><label>Service Needed</label><select id="pService"><option>Deep Chimney Service - 30 Mint Visit</option><option>Basic Chimney Service - Expert</option><option>Chimney Check-up - HomeDoor</option><option>Chimney Motor Repair</option><option>Chimney Installation</option></select></div>
-<div class="form-group"><label>Area in South Delhi</label><select id="pArea"><option>GK-1</option><option>GK-2</option><option>Lajpat Nagar</option><option>Saket</option><option>Vasant Kunj</option><option>Defence Colony</option></select></div>
+<div class="form-group"><label>Service Needed</label><select id="pService"><option>Deep Chimney Service - 30 Mint Visit</option><option>Basic Chimney Service - Expert</option><option>Chimney Check-up - HomeDoor</option><option>Chimney Motor Repair</option><option>Chimney Installation</option><option>Chimney Uninstallation</option></select></div>
+<div class="form-group"><label>Area in South Delhi</label><select id="pArea"><option>GK-1</option><option>GK-2</option><option>Lajpat Nagar</option><option>Saket</option><option>Vasant Kunj</option><option>Defence Colony</option><option>Malviya Nagar</option><option>Hauz Khas</option></select></div>
 <button class="book-btn" onclick="submitBooking()">📲 Book Now - 30 Mint Visit</button>
 <a href="tel:8796284796" class="call-now-btn">📞 Call Now - Expert Technician</a>
 </div>
 
 <div class="seo-box">
 <h2>Chimney Solution South Delhi - Expert Technician 30 Mint Visit HomeDoor</h2>
-<p>Welcome to Chimney Solution South Delhi - Expert technician 30 Mint Visit HomeDoor Service. All brands service available - Faber, Glen, Hafele, Kaff, Siemens, Elica, Hindware, Sunflame, Inalsa, Bajaj, Prestige, Pigeon, BlowHot. Chimney service in GK-1, GK-2, Lajpat Nagar, Saket, Vasant Kunj, Defence Colony, Malviya Nagar, Hauz Khas, Green Park, Greater Kailash, Kalkaji, Nehru Place, CR Park, Alaknanda, Panchsheel Park, Shahpur Jat, Kotla, Sadiq Nagar, Lado Sarai, Mehrauli, Chattarpur.</p>
-<p class="keywords">faber glen hafele kaff siemens elica hindware chimney service south delhi | chimney cleaning repair installation south delhi | chimney service near me | 30 mint visit homedoor | expert technician | Call Now</p>
+<p>Welcome to Chimney Solution South Delhi - Expert technician 30 Mint Visit HomeDoor Service. We provide Deep Chimney Cleaning Service, Basic Chimney Service, Chimney Repair, Installation, Uninstallation with 90-day warranty and 4.6 star rating.</p>
+<h3>All Chimney Brands Service Available - South Delhi</h3>
+<p>Faber Chimney Service South Delhi, Glen Chimney Service, Hafele Chimney Service, Kaff Chimney Service, Siemens Chimney Service, Elica Chimney Service, Hindware Chimney Service, Sunflame Chimney Service, Inalsa Chimney Service, Bajaj Chimney Service, Prestige Chimney Service, Pigeon Chimney Service, BlowHot Chimney Service. Best chimney service in South Delhi, same day chimney service, 30 mint visit chimney service.</p>
+<h3>South Delhi All Locations - 30 Mint Visit HomeDoor Service</h3>
+<p>Chimney Service in GK-1 South Delhi, Chimney Service in GK-2, Lajpat Nagar, Saket, Vasant Kunj, Defence Colony, Malviya Nagar, Hauz Khas, Green Park, Greater Kailash, Kalkaji, Nehru Place, CR Park, Alaknanda, Panchsheel Park, Shahpur Jat, Kotla, Sadiq Nagar, Lado Sarai, Mehrauli, Chattarpur. Expert technician 30 mint visit homedoor in all South Delhi locations.</p>
+<p class="keywords">faber glen hafele kaff siemens elica hindware sunflame inalsa bajaj chimney service south delhi | chimney cleaning repair installation south delhi | chimney service GK-1 GK-2 Lajpat Nagar Saket Vasant Kunj Defence Colony Malviya Nagar Hauz Khas | chimney service near me | 30 mint visit homedoor | expert technician | Call Now chimney service</p>
 </div>
 
-<div class="footer-link">View all <a href="/south-delhi-locations/">South Delhi 30 Locations - 30 Mint Visit</a><br><br>© Chimney Solution South Delhi • Expert Technician • HomeDoor Service • 30 Mint Visit</div>
+<div class="footer-link">View all <a href="/south-delhi-locations/">South Delhi 30 Locations - 30 Mint Visit</a><br><br>© Chimney Solution South Delhi • Expert Technician • HomeDoor Service • 30 Mint Visit • 90-Day Warranty • 4.6★ 335 Reviews • Faber Glen Hafele Kaff Siemens Elica Hindware All Brands</div>
 </div>
 
 <div class="scroll-hint" id="scrollHint">👇 Scroll - More Services Below</div>
@@ -126,6 +168,8 @@ function switchTab(id, el){
 }
 function scrollToForm(){
  document.getElementById('bookingForm').scrollIntoView({behavior:'smooth'});
+ document.getElementById('bookingForm').style.borderColor = '#ff385c';
+ setTimeout(()=>{ document.getElementById('bookingForm').style.borderColor = '#111'; }, 1000);
 }
 function submitBooking(){
  const name = document.getElementById('pName').value || 'Customer';
@@ -135,24 +179,12 @@ function submitBooking(){
  const msg = `Hi Chimney Solution South Delhi!%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AArea: ${area}%0AExpert Technician 30 Mint Visit HomeDoor`;
  window.location.href = `https://wa.me/918796284796?text=${msg}`;
 }
-
-// AUTO SCROLL EFFECT - Website open hote hi thoda scroll hoga
 window.addEventListener('load', function(){
  const hint = document.getElementById('scrollHint');
- // 1 sec baad hint dikhao
  setTimeout(()=>{ hint.classList.add('show'); }, 800);
- // 1.2 sec baad thoda auto scroll down
- setTimeout(()=>{
-   window.scrollBy({top: 220, behavior: 'smooth'});
- }, 1200);
- // 2.5 sec baad wapas upar thoda scroll - taki customer ko pata chale niche content hai
- setTimeout(()=>{
-   window.scrollBy({top: -80, behavior: 'smooth'});
- }, 2500);
- // 4 sec baad hint hatao
- setTimeout(()=>{
-   hint.classList.remove('show');
- }, 4000);
+ setTimeout(()=>{ window.scrollBy({top: 240, behavior: 'smooth'}); }, 1200);
+ setTimeout(()=>{ window.scrollBy({top: -80, behavior: 'smooth'}); }, 2500);
+ setTimeout(()=>{ hint.classList.remove('show'); }, 4000);
 });
 </script>
 </body>
