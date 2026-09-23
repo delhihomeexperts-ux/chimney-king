@@ -3,67 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHIMNEY KING™ - 911 LINES - World's Biggest Chimney Page</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<title>Chimney King - South Delhi Chimney Service (30 Locations)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
 <style>
-body{background:#050507;color:#fff;font-family:'Inter',sans-serif;margin:0}
-h1,h2{font-family:'Syne',sans-serif}
-.glass{background:rgba(18,18,23,.9);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(12px)}
-.area{padding:10px;border-radius:999px;border:1px solid #222;background:#121217;font-size:11px;text-align:center;transition:.2s}
-.area:hover{background:#D6FF57;color:#000;border-color:#D6FF57}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f6f6f7}
+.header{background:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}
+.logo{line-height:1}
+.logo b{font-size:20px;font-weight:800;display:block}
+.logo span{font-size:11px;letter-spacing:1px;color:#666}
+.btn-red{background:#e11d48;color:#fff;padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:800;font-size:15px}
+.wrap{padding:18px 16px}
+.wrap h2{font-size:18px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid a{color:#1e40af;text-decoration:underline;font-size:14px;padding:6px 0;line-height:1.3}
+.footer{padding:20px 16px 100px;text-align:center;font-size:11px;color:#999}
+.float{position:fixed;bottom:12px;left:12px;right:12px;display:flex;gap:10px;z-index:20}
+.float a{flex:1;padding:16px;border-radius:14px;text-align:center;text-decoration:none;font-weight:800;font-size:15px}
+.black{background:#111;color:#fff}
+.green{background:#22c55e;color:#fff}
+.popup{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:flex-end;z-index:50}
+.popup.show{display:flex}
+.box{background:#fff;width:100%;border-radius:24px 24px 0 0;padding:20px}
+.box input{width:100%;padding:14px;border:1.5px solid #ddd;border-radius:10px;margin-top:10px}
+.box button{width:100%;margin-top:14px;background:#111;color:#fff;padding:16px;border-radius:12px;font-weight:800;border:0}
 </style>
 </head>
 <body>
-
-<div style="background:#D6FF57;color:#000;text-align:center;padding:8px;font-weight:800;font-size:11px;letter-spacing:1px">⚡ 911 LINES MEIN PURA CHIMNEY KA GYAAN ⚡ FREE SERVICE IN 90 MINS</div>
-<nav style="display:flex;justify-content:space-between;padding:20px 4%;border-bottom:1px solid #222;align-items:center">
-<div style="font-weight:800;font-size:20px;letter-spacing:-1px">CHIMNEY KING<span style="color:#D6FF57">™</span></div>
-<div style="background:#D6FF57;color:#000;padding:8px 16px;border-radius:999px;font-weight:800;font-size:12px">CALL 911-911-0911</div>
-</nav>
-
-<section style="padding:40px 5%;display:grid;grid-template-columns:1.2fr.8fr;gap:20px" class="max-[800px]:!grid-cols-1">
-<div>
-<h1 style="font-size:70px;line-height:0.9">WE DON'T<br>REPAIR.<br><span style="color:#D6FF57">WE RE-ENGINEER.</span></h1>
-<div id="areas" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px"></div>
+<div class="header">
+<div class="logo"><b>CHIMNEY KING</b><span>SOUTH DELHI ONLY • 9119110911</span></div>
+<a href="tel:9119110911" class="btn-red">Call Now</a>
 </div>
 
-<div style="background:#121217;border:1px solid #333;border-radius:20px;padding:20px">
-<h2>3-IN-1 CALCULATOR</h2>
-<select id="fault" style="width:100%;background:#000;border:1px solid #333;padding:12px;border-radius:10px;margin-top:12px;color:#fff">
-<option value="800">Motor Jam / Noise</option>
-<option value="1200">Suction Low</option>
-<option value="1500">PCB / Touch Not Working</option>
-<option value="2000">Full Service + Deep Clean</option>
-</select>
-<div id="price" style="font-size:50px;color:#D6FF57;font-weight:800;margin-top:10px">₹699</div>
-<button onclick="calc()" style="width:100%;background:#D6FF57;color:#000;padding:14px;border-radius:10px;font-weight:800;margin-top:10px;cursor:pointer">CHECK FINAL PRICE</button>
-<p style="font-size:10px;opacity:.5;margin-top:10px">No Visit Charge. 90 Mins Arrival. 2 Year Warranty.</p>
+<div class="wrap">
+<h2>Our Service Areas (30 Locations):</h2>
+<div class="grid">
+<a href="#" onclick="openBook('Faber GK-1');return false">Faber GK-1</a>
+<a href="#" onclick="openBook('Faber GK-2');return false">Faber GK-2</a>
+<a href="#" onclick="openBook('Faber Lajpat Nagar');return false">Faber Lajpat Nagar</a>
+<a href="#" onclick="openBook('Faber Saket');return false">Faber Saket</a>
+<a href="#" onclick="openBook('Faber Vasant Kunj');return false">Faber Vasant Kunj</a>
+<a href="#" onclick="openBook('Faber Defence Colony');return false">Faber Defence Colony</a>
+
+<a href="#" onclick="openBook('Glen GK-1');return false">Glen GK-1</a>
+<a href="#" onclick="openBook('Glen GK-2');return false">Glen GK-2</a>
+<a href="#" onclick="openBook('Glen Lajpat Nagar');return false">Glen Lajpat Nagar</a>
+<a href="#" onclick="openBook('Glen Saket');return false">Glen Saket</a>
+<a href="#" onclick="openBook('Glen Vasant Kunj');return false">Glen Vasant Kunj</a>
+<a href="#" onclick="openBook('Glen Defence Colony');return false">Glen Defence Colony</a>
+
+<a href="#" onclick="openBook('Hafele GK-1');return false">Hafele GK-1</a>
+<a href="#" onclick="openBook('Hafele GK-2');return false">Hafele GK-2</a>
+<a href="#" onclick="openBook('Hafele Lajpat Nagar');return false">Hafele Lajpat Nagar</a>
+<a href="#" onclick="openBook('Hafele Saket');return false">Hafele Saket</a>
+<a href="#" onclick="openBook('Hafele Vasant Kunj');return false">Hafele Vasant Kunj</a>
+<a href="#" onclick="openBook('Hafele Defence Colony');return false">Hafele Defence Colony</a>
+
+<a href="#" onclick="openBook('Kaff GK-1');return false">Kaff GK-1</a>
+<a href="#" onclick="openBook('Kaff GK-2');return false">Kaff GK-2</a>
+<a href="#" onclick="openBook('Kaff Lajpat Nagar');return false">Kaff Lajpat Nagar</a>
+<a href="#" onclick="openBook('Kaff Saket');return false">Kaff Saket</a>
+<a href="#" onclick="openBook('Kaff Vasant Kunj');return false">Kaff Vasant Kunj</a>
+<a href="#" onclick="openBook('Kaff Defence Colony');return false">Kaff Defence Colony</a>
+
+<a href="#" onclick="openBook('Siemens GK-1');return false">Siemens GK-1</a>
+<a href="#" onclick="openBook('Siemens GK-2');return false">Siemens GK-2</a>
+<a href="#" onclick="openBook('Siemens Lajpat Nagar');return false">Siemens Lajpat Nagar</a>
+<a href="#" onclick="openBook('Siemens Saket');return false">Siemens Saket</a>
+<a href="#" onclick="openBook('Siemens Vasant Kunj');return false">Siemens Vasant Kunj</a>
+<a href="#" onclick="openBook('Siemens Defence Colony');return false">Siemens Defence Colony</a>
 </div>
-</section>
-
-<section style="padding:20px 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="max-[800px]:!grid-cols-1">
-<div style="background:#121217;border:1px solid #222;border-radius:20px;padding:24px"><h3 style="color:#D6FF57">✓ 11,000+ CHIMNEYS</h3><p style="opacity:.6;font-size:13px;margin-top:8px">Repaired in Delhi NCR since 2011. Every brand: Elica, Faber, Hindware, Kaff, Glen</p></div>
-<div style="background:#121217;border:1px solid #222;border-radius:20px;padding:24px"><h3 style="color:#D6FF57">✓ 911 LINES OF TRUTH</h3><p style="opacity:.6;font-size:13px;margin-top:8px">World's longest chimney page. No hidden charges. Full price breakup before work.</p></div>
-<div style="background:#121217;border:1px solid #222;border-radius:20px;padding:24px"><h3 style="color:#D6FF57">✓ 90 MIN ARRIVAL</h3><p style="opacity:.6;font-size:13px;margin-top:8px">GK, Lajpat, Saket, Vasant Kunj, Dwarka, Janakpuri, Rohini - same day fix.</p></div>
-</section>
-
-<section style="padding:20px 5%">
-<div style="background:#D6FF57;color:#000;border-radius:24px;padding:30px;text-align:center">
-<h2 style="font-size:40px">DELHI'S ONLY CHIMNEY LAB</h2>
-<p style="font-weight:600">We don't send electricians. We send Chimney Engineers with PCB tester, motor winding machine & original spares.</p>
 </div>
-</section>
 
-<footer style="border-top:1px solid #222;padding:30px;text-align:center;font-size:11px;opacity:0.3">© 2026 CHIMNEY KING™ - A DELHIHOMEEXPERTS VENTURE | 911 LINES | WORLD'S BIGGEST CHIMNEY PAGE</footer>
+<div class="footer">© Chimney King • South Delhi ONLY • 11k+ Happy Customers</div>
+
+<div class="float">
+<a href="tel:9119110911" class="black">Call: 9119110911</a>
+<a href="https://wa.me/919119110911" class="green">WhatsApp</a>
+</div>
+
+<div id="popup" class="popup" onclick="if(event.target==this)closeBook()">
+<div class="box">
+<h2 id="popTitle">Book Service</h2>
+<p style="font-size:12px;color:#666;margin-top:4px">Engineer will call in 2 mins • 90 min arrival</p>
+<input id="name" placeholder="Your Name">
+<input id="phone" placeholder="Phone Number">
+<input id="addr" placeholder="Full Address - e.g. GK-1">
+<button onclick="confirmBook()">CONFIRM BOOKING →</button>
+</div>
+</div>
 
 <script>
-const areas=['GK-1','GK-2','Lajpat Nagar','Malviya Nagar','Saket','Vasant Kunj','Dwarka S7','Dwarka S10','Janakpuri','Rohini S11','Rohini S15','Paschim Vihar','Punjabi Bagh','Rajouri Garden','Uttam Nagar','Laxmi Nagar','Preet Vihar','Shahdara','Model Town','Pitampura','Ashok Vihar','Shalimar Bagh','Kalkaji','Govindpuri'];
-const el=document.getElementById('areas');
-areas.forEach(a=>{let d=document.createElement('div');d.className='area';d.innerText=a;el.appendChild(d);});
-function calc(){
-  let f=document.getElementById('fault').value;
-  document.getElementById('price').innerText='₹'+f;
+let currentService = '';
+function openBook(s){currentService=s;document.getElementById('popTitle').innerText=s+' - Book Now';document.getElementById('popup').classList.add('show')}
+function closeBook(){document.getElementById('popup').classList.remove('show')}
+function confirmBook(){
+ let p=document.getElementById('phone').value;
+ if(!p){alert('Number daal bhai');return}
+ window.location.href='https://wa.me/919119110911?text=Hi%20Chimney%20King,%20Book%20'+encodeURIComponent(currentService)+'%20for%20'+p;
+ closeBook();
 }
 </script>
 </body>
