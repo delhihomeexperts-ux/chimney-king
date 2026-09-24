@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>60 Chimney Services - 8796284796</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-white pb-28">
+<div class="flex justify-between p-4 border-b bg-white sticky top-0 z-10"><div class="flex gap-2 items-center"><div class="bg-black text-white p-2 rounded-lg">🍳</div><div><h1 class="font-black text-sm leading-none">CHIMNEY SOLUTION</h1><p class="text-pink-600 font-bold text-xs">SOUTH DELHI - 60 PAGES</p></div></div><a href="tel:8796284796" class="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold">● 30 MIN</a></div>
+
+<div id="servicePage" class="hidden">
+<div class="m-4 border-2 border-black rounded-[20px] p-5">
+<h2 id="sH" class="font-black text-[22px]"></h2>
+<p class="text-sm text-gray-600 mt-2">90-Day Warranty • 30 Min Visit • 8796284796</p>
+<form onsubmit="event.preventDefault();let m=document.getElementById('mob').value;let n=document.getElementById('name').value;window.open('https://wa.me/918796284796?text=*BOOKING*%20'+b+'%20'+a+'%0AName:'+n+'%0AMob:'+m,'_blank')" class="mt-5 space-y-3">
+<input id="name" required placeholder="Your Name" class="w-full border rounded-xl p-3.5 text-sm">
+<input id="mob" required placeholder="Mobile Number" class="w-full border rounded-xl p-3.5 text-sm">
+<select class="w-full border rounded-xl p-3.5 text-sm bg-gray-100"><option>Deep Service - 30 Min Visit</option><option>Repair</option><option>Installation</option></select>
+<button class="w-full bg-black text-white py-4 rounded-xl font-bold">📲 Book Now - 30 Min Visit</button>
+<a href="tel:8796284796" class="w-full bg-[#ff2d55] text-white py-4 rounded-xl font-bold flex justify-center">📞 Call Now - 8796284796</a>
+</form>
+</div>
+<div class="px-5 mt-4"><p id="sP" class="text-sm text-gray-600"></p><div class="mt-4 bg-yellow-50 p-3 rounded-xl text-xs"><b>Disclaimer:</b> We are independent service, not authorized.</div></div>
+<a href="./" class="block text-center mt-6 text-sm text-blue-600 font-bold">← Back to All 60 Services</a>
+</div>
+
+<div id="listPage" class="p-4">
+<h2 class="font-black text-lg">All 60 Pages - Ek Sath (10 Area x 6 Brand)</h2>
+<p class="text-xs text-gray-500 mt-1">GK-1, GK-2, Greater Kailash, Defence Colony, Saket, Green Park, Panchsheel Park, New Friends Colony, Malviya Nagar, Lajpat Nagar</p>
+<div id="grid" class="grid grid-cols-1 gap-3 mt-5"></div>
+</div>
+
+<div class="bg-black text-white text-center py-5 px-4 mt-8"><p class="text-xs font-bold tracking-widest">WE ARE INDEPENDENT SERVICE PROVIDER FOR ALL BRANDS</p><p class="text-xs mt-2 text-gray-300">SIEMENS | ELICA | HAFELE | BOSCH | FABER | GLEN - 8796284796</p></div>
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t p-3 flex gap-3"><a href="tel:8796284796" class="flex-1 bg-black text-white py-3.5 rounded-xl font-bold text-center text-sm">Call Now</a><a href="https://wa.me/918796284796" class="flex-1 bg-green-500 text-white py-3.5 rounded-xl font-bold text-center text-sm">WhatsApp</a></div>
+
+<script>
+const BRANDS={siemens:"Siemens",elica:"Elica",hafele:"Hafele",bosch:"Bosch",faber:"Faber",glen:"Glen"};
+const AREAS={"greater-kailash":"Greater Kailash","defence-colony":"Defence Colony","saket":"Saket","green-park":"Green Park","panchsheel-park":"Panchsheel Park","new-friends-colony":"New Friends Colony","malviya-nagar":"Malviya Nagar","lajpat-nagar":"Lajpat Nagar","gk-1":"GK-1","gk-2":"GK-2"};
+const q=new URLSearchParams(location.search);let b=q.get('brand'),a=q.get('area');
+if(b&&a&&BRANDS[b]&&AREAS[a]){
+ listPage.classList.add('hidden');servicePage.classList.remove('hidden');
+ sH.innerText=`🍳 ${BRANDS[b]} Service in ${AREAS[a]} - 30 Min Visit`;
+ sP.innerText=`Expert ${BRANDS[b]} chimney service, repair, installation in ${AREAS[a]} South Delhi. 30 Min doorstep. Call 8796284796.`;
+ document.title=`${BRANDS[b]} Service in ${AREAS[a]} - 30 Min | 8796284796`;
+}
+let g="";Object.keys(BRANDS).forEach(x=>{Object.keys(AREAS).forEach(y=>{
+ g+=`<a href="?brand=${x}&area=${y}" class="block bg-white border-2 border-black rounded-xl p-4"><div class="font-black text-sm">🍳 ${BRANDS[x]} Chimney - ${AREAS[y]}</div><div class="text-xs text-gray-500 mt-1">${x}-chimney-service-${y}-south-delhi • 30 Min Visit • 8796284796</div></a>`;
+});});
+grid.innerHTML=g;
+</script>
+</body></html>
