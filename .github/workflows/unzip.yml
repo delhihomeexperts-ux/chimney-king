@@ -12,7 +12,7 @@ jobs:
           echo "Zip: $ZIP"
           unzip -o "$ZIP" -d /tmp/p
           SRC=$(find /tmp/p -type d -name services | head -1)
-          echo "Services folder: $SRC"
+          echo "Services: $SRC"
           mkdir -p public/services
           cp -r $SRC/* public/services/
           rm -rf /tmp/p "$ZIP"
