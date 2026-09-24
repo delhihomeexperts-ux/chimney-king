@@ -8,20 +8,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          find. -name "*.zip" -type f
           ZIP=$(find. -name "*.zip" -type f | head -1)
-          echo "Found zip: $ZIP"
+          echo "Found: $ZIP"
           unzip -o "$ZIP" -d /tmp/p
           SRC=$(find /tmp/p -type d -name services | head -1)
-          echo "Found services: $SRC"
+          echo "Services: $SRC"
           mkdir -p public/services
           cp -r $SRC/* public/services/
           rm -rf /tmp/p "$ZIP"
-          ls public/services | head -20
-          echo "Total: $(ls public/services | wc -l) folders"
+          echo "Done! Count:"
+          ls public/services | wc -l
       - run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
           git add public/services/
-          git commit -m "Auto extract 60 pages" || echo "no changes"
+          git commit -m "Add 60 pages" || true
           git push
