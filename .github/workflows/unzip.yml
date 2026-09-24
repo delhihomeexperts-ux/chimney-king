@@ -8,18 +8,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          ZIP=$(find -name "*.zip" -type f | head -1)
-          unzip -o $ZIP -d /tmp/p
-          SRC=$(find /tmp/p -type d -name services | head -1)
-          mkdir -p public/services
-          mkdir -p services
-          cp -r $SRC/* public/services/
-          cp -r $SRC/* services/
-          rm -rf /tmp/p $ZIP
-          ls public/services | wc -l
+          if ls *.zip 1> /dev/null 2>&1; then
+            ZIP=$(ls *.zip | head -1)
+            unzip -o $ZIP -d /tmp/p
+            SRC=$(find /tmp/p -type d -name services | head -1)
+            mkdir -p public/services services
+            cp -r $SRC/* public/services/
+            cp -r $SRC/* services/
+            rm -rf /tmp/p $ZIP
+          else
+            mkdir -p services
+            cp -r public/services/* services/
+          fi
       - run: |
           git config user.name "bot"
           git config user.email "bot@bot.com"
           git add public/services/ services/
-          git commit -m "Add 60 pages" || true
+          git commit -m "Fix root services" || true
           git push
