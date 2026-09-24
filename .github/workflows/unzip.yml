@@ -1,0 +1,16 @@
+name: Deploy 60 pages
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          unzip -o public/services/60-chimney-pages.zip -d /tmp/p
+          SRC=$(find /tmp/p -type d -name services | head -1)
+          cp -r $SRC/* public/services/
+          rm -rf /tmp/p public/services/60-chimney-pages.zip
+          ls public/services
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto extract 60 pages"
