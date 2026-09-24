@@ -3,14 +3,25 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - run: |
-          unzip -o public/services/60-chimney-pages.zip -d /tmp/p
+          find. -name "*.zip" -type f
+          ZIP=$(find. -name "*.zip" -type f | head -1)
+          echo "Found zip: $ZIP"
+          unzip -o "$ZIP" -d /tmp/p
           SRC=$(find /tmp/p -type d -name services | head -1)
+          echo "Found services: $SRC"
+          mkdir -p public/services
           cp -r $SRC/* public/services/
-          rm -rf /tmp/p public/services/60-chimney-pages.zip
-          ls public/services
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Auto extract 60 pages"
+          rm -rf /tmp/p "$ZIP"
+          ls public/services | head -20
+          echo "Total: $(ls public/services | wc -l) folders"
+      - run: |
+          git config user.name "bot"
+          git config user.email "bot@bot.com"
+          git add public/services/
+          git commit -m "Auto extract 60 pages" || echo "no changes"
+          git push
